@@ -5,6 +5,22 @@ resources:
     uri: https://github.com/NiranEC77/nsx-t-smoke-tests
     branch: "master"
 
+groups:
+- name: all-tests
+  jobs:
+  - north-south
+  - east-west
+  - vsphere-config 
+- name: vsphere-config
+  jobs:
+  - vsphere-config
+- name: east-west
+  jobs:
+  - east-west
+- name: north-south
+  jobs:
+  - north-south
+
 jobs:
 - name: vsphere-config
   plan:
@@ -15,10 +31,10 @@ jobs:
 
 - name: east-west
   plan:
-    
   - aggregate:
     - get: nsx-t-smoke-tests
       passed: [vsphere-config]
+      trigger: true
   - task: east-west
     file: nsx-t-smoke-tests/tasks/east-west/task.yml
 
@@ -27,6 +43,7 @@ jobs:
   - aggregate:
     - get: nsx-t-smoke-tests
       passed: [vsphere-config]
+      trigger: true
   - task: north-south
     file: nsx-t-smoke-tests/tasks/north-south/task.yml
 
