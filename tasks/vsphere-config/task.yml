@@ -1,0 +1,12 @@
+---
+
+platform: linux
+
+image_resource:
+  type: docker-image
+
+inputs:
+  - name: nsx-t-smoke-tests
+
+run:
+  path: nsx-t-smoke-tests/tasks/vsphere-config/task.sh
