@@ -9,14 +9,14 @@ echo Started vSphere Config task
 # Check uplink portgroup, downlink portgroup, jumbo frames
 # Check existence of clusters
 
-export GOVC_URL=https://vcenter-server
-export GOVC_USERNAME="Administrator@vsphere.local"
-export GOVC_PASSWORD="PASSWORD"
+export GOVC_URL=$(vcenter-ip)
+export GOVC_USERNAME=$(vcenter-user)
+export GOVC_PASSWORD=$(vcenter-password)
 
 export GOVC_INSECURE="True"
 
-export VCENTER_DC="dc01"
-export VCENTER_CLUSTER="cluster01"
+export VCENTER_DC=$(vcenter-dc)
+export VCENTER_CLUSTER=$(vcenter-cluster)
 
 
 # check_portgroups_exist : Checks if portgroups exist

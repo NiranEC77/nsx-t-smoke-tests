@@ -1,3 +1,10 @@
+nsx_t_gen_params: &vsphere-config-params
+  vcenter-ip: ((vcenter_ip))
+  vcenter-user: ((vcenter-user))
+  vcenter-password: ((vcenter-password))
+  vcenter-dc: ((vcenter-dc))
+  vcenter-cluster: ((vcenter-cluster))
+
 resources:
 - name: nsx-t-smoke-tests
   type: git
@@ -28,6 +35,7 @@ jobs:
     - get: nsx-t-smoke-tests
   - task: vsphere-config
     file: nsx-t-smoke-tests/tasks/vsphere-config/task.yml
+    params: *vsphere-config-params
 
 - name: east-west
   plan:

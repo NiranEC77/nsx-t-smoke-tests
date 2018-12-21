@@ -1,0 +1,6 @@
+
+vcenter_ip: 192.168.110.22
+vcenter-cluster: RegionA01-K8s
+vcenter-password: VMware1!
+vcenter-dc: RegionA01
+vcenter-cluster: RegionA01-MGMT
