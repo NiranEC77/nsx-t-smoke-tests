@@ -1,9 +1,9 @@
 nsx_t_gen_params: &vsphere-config-params
-  vcenterip: ((vcenterip))
-  vcenteruser: ((vcenteruser))
-  vcenterpassword: ((vcenterpassword))
-  vcenterdc: ((vcenterdc))
-  vcentercluster: ((vcentercluster))
+  vcenterip: {{vcenterip}}
+  vcenteruser: {{vcenteruser}}
+  vcenterpassword: {{vcenterpassword}}
+  vcenterdc: {{vcenterdc}}
+  vcentercluster: {{vcentercluster}}
 
 resources:
 - name: nsx-t-smoke-tests
