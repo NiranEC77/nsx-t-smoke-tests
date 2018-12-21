@@ -10,13 +10,13 @@ echo Started vSphere Config task
 # Check existence of clusters
 
 export GOVC_URL=$vcenter-ip
-export GOVC_USERNAME=$(vcenter-user)
-export GOVC_PASSWORD=$(vcenter-password)
+export GOVC_USERNAME=$vcenter-user
+export GOVC_PASSWORD=$vcenter-password
 
 export GOVC_INSECURE="True"
 
-export VCENTER_DC=$(vcenter-dc)
-export VCENTER_CLUSTER=$(vcenter-cluster)
+export VCENTER_DC=$vcenter-dc
+export VCENTER_CLUSTER=$vcenter-cluster
 
 
 # check_portgroups_exist : Checks if portgroups exist
