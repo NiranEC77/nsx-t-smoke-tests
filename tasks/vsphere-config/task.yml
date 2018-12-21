@@ -17,3 +17,6 @@ params:
   vcenterpassword:
   vcenterdc:
   vcentercluster:
+  PG_OVERLAY:
+  PG_UPLINK:
+  PG_UPLINK_VLANID:

@@ -5,3 +5,6 @@ vcenteruser: administrator@corp.local
 vcenterpassword: VMware1!
 vcenterdc: RegionA01
 vcentercluster: RegionA01-MGMT
+PG_UPLINK: aleks-ul
+PG_OVERLAY: aleks-ol
+PG_UPLINK_VLANID: 756

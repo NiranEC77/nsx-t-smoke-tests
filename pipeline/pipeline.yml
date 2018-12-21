@@ -4,6 +4,9 @@ nsx_t_gen_params: &vsphere-config-params
   vcenterpassword: {{vcenterpassword}}
   vcenterdc: {{vcenterdc}}
   vcentercluster: {{vcentercluster}}
+  PG_OVERLAY: {{PG_OVERLAY}}
+  PG_UPLINK: {{PG_UPLINK}}
+  PG_UPLINK_VLANID: {{PG_UPLINK_VLANID}}
 
 resources:
 - name: nsx-t-smoke-tests
