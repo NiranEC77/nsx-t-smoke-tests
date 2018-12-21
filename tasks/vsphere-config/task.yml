@@ -12,8 +12,8 @@ run:
   path: nsx-t-smoke-tests/tasks/vsphere-config/task.sh
 
 params:
-  vcenter-ip:
-  vcenter-user:
-  vcenter-password:
-  vcenter-dc:
-  vcenter-cluster:
+  vcenterip:
+  vcenteruser:
+  vcenterpassword:
+  vcenterdc:
+  vcentercluster:
